@@ -7,11 +7,11 @@ const Skills = () => {
   return (
     <div className="h-full flex xl:flex-row flex-col-reverse overflow-hidden bg-black">
       <motion.div>
-        <div id="skills" className="flex flex-col items-center h-[50vh] bg-black p-2">
+        <div id="skills" className="flex flex-col items-center h-1/2 bg-black p-2">
           <h2 className="text-4xl text-yellow-500 mt-12 tracking-wide text-center mb-12">
             Skills
           </h2>
-          <div className="flex space-x-5 flex-wrap w-3/4">
+          <div className="flex justify-center space-x-5 flex-wrap w-full h-1/2">
             {skillsArr.map((skill, index) => {
                 const {
                 name, icon, bgColor = "bg-red-300"

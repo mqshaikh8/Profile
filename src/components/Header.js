@@ -1,18 +1,9 @@
 import { useState } from "react";
 import { Spiral as Hamburger } from 'hamburger-react'
-/*
-text-edf2f4 , text-shadow-sm - Fix this it
-*/
-import { GiHamburgerMenu } from "react-icons/gi";
-
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
-    const [active, setActive] = useState('')
-    const handleClick = () => {
-      console.log('showMenu => => =>', showMenu)
-      setShowMenu(!showMenu)
-    }
-    console.log("SHOW MENU => ->", showMenu)
+    const [active] = useState('')
+
     const navItemClasses = "relative inline-block text-xl mr-8";
     const underlineClasses = "absolute w-full h-[0.125rem] bg-lightgrey opacity-0 bottom-[-1rem] left-0 transition-opacity duration-100 hover:opacity-100";
     return (
@@ -50,7 +41,7 @@ const Header = () => {
               </div>
           </div>
           <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <GiHamburgerMenu 
+          <Hamburger 
             alt="menu"
             className='w-[28px] h-[28px] object-contain cursor-pointer text-gray-600'
             onClick={() => setShowMenu(!showMenu)}
